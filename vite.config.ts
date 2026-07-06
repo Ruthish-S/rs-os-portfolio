@@ -4,12 +4,16 @@ import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
 
 export default defineConfig({
+  base: '/rs-os-portfolio/',
+
   plugins: [react(), tailwindcss()],
+
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
   },
+
   server: {
     host: '0.0.0.0',
     port: 5173,
