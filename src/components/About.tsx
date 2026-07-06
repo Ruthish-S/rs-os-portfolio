@@ -159,7 +159,7 @@ export default function About() {
             {/* Cell D: Output */}
             <motion.div variants={itemVariants} className="bg-[#141414] p-8 lg:col-span-8 flex flex-col justify-center gap-8 font-display font-bold text-3xl md:text-4xl tracking-tight">
               <div className="flex items-center gap-6 group cursor-default">
-                <span className="text-[#E85002] w-12 group-hover:scale-110 transition-transform origin-left">10</span>
+                <span className="text-[#E85002] w-12 group-hover:scale-110 transition-transform origin-left">10+</span>
                 <span className="text-[#F2F2F0]">COMPLETED PROJECTS</span>
               </div>
               <div className="w-full h-px bg-[#333]"></div>
