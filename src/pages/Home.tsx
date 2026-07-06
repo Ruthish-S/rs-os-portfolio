@@ -22,7 +22,7 @@ export default function Home() {
       <Education />
       <SectionDivider label="/03 — Tool Lab" from="#E8E8E4" to="#0A0A0A" textOn="dark" />
       <Skills />
-      <SectionDivider label="/03b — Tool Stack" from="#0A0A0A" to="#F2F2F0" textOn="light" />
+      <SectionDivider label="/03b — Engineering Toolchain" from="#0A0A0A" to="#F2F2F0" textOn="light" />
       <Tools />
       <SectionDivider label="/04 — Timeline" from="#F2F2F0" to="#0A0A0A" textOn="dark" />
       <Experience />

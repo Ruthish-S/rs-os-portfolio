@@ -71,7 +71,7 @@ export default function Certifications() {
     : certsData.filter(c => TABS.find(t => t.id === activeTab)?.types?.includes(c.type));
 
   return (
-    <section id="certifications" className="py-24 bg-[#F4F4F1]">
+    <section id="certifications" className="py-24 bg-[#F2F2F0]">
       <div className="container mx-auto px-6 max-w-6xl">
         <motion.div
           ref={ref as React.RefObject<HTMLDivElement>}
@@ -80,7 +80,7 @@ export default function Certifications() {
           transition={{ duration: 0.6 }}
         >
           {/* ── Header ── */}
-          <div className="mb-10 border-b border-[#D8D8D4] pb-6">
+          <div className="mb-10 border-b border-[#DEDEDA] pb-6">
             <div className="font-mono text-[#E85002] text-xs tracking-[0.2em] mb-3">
               MODULE /06 — CERTIFICATION_VAULT
             </div>
@@ -90,7 +90,7 @@ export default function Certifications() {
           </div>
 
           {/* ── Tab bar ── */}
-          <div className="flex flex-wrap gap-1 mb-8 border-b border-[#D8D8D4]">
+          <div className="flex flex-wrap gap-1 mb-8 border-b border-[#DEDEDA]">
             {TABS.map(tab => {
               const count = tab.types === null
                 ? certsData.length

@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { containerVariants, itemVariants } from '../lib/animations';
@@ -139,34 +138,6 @@ const TopSkillCard = () => (
   </motion.div>
 );
 
-/* ─── Full-width bar chart — every skill, animated fill-in, clearly legible ── */
-const BarRow = ({ sk, index, isVisible }: { sk: typeof SKILLS[0]; index: number; isVisible: boolean }) => {
-  const [hover, setHover] = useState(false);
-  return (
-    <div
-      className="flex items-center gap-4 py-2.5 group"
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
-      <span className="font-mono text-[10px] sm:text-[11px] text-[#C0C0BC] w-20 sm:w-32 md:w-40 shrink-0 truncate">{sk.short}</span>
-      <div className="flex-1 h-3 bg-[#141414] rounded-full overflow-hidden relative">
-        {/* target marker */}
-        <div className="absolute top-0 bottom-0 w-px bg-white/25" style={{ left: `${sk.target}%` }} />
-        <motion.div
-          initial={{ width: 0 }}
-          animate={isVisible ? { width: `${sk.pct}%` } : { width: 0 }}
-          transition={{ duration: 0.9, delay: 0.05 * index, ease: [0.22, 1, 0.36, 1] }}
-          className="h-full rounded-full"
-          style={{ background: hover ? '#FF6A1A' : 'linear-gradient(90deg, #C44000, #E85002)' }}
-        />
-      </div>
-      <span className={`font-mono text-[11px] w-10 text-right shrink-0 transition-colors ${hover ? 'text-[#E85002]' : 'text-[#646464]'}`}>
-        {sk.pct}%
-      </span>
-    </div>
-  );
-};
-
 export default function Skills() {
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
 
@@ -207,37 +178,6 @@ export default function Skills() {
             </div>
           </motion.div>
 
-          {/* Full skill bar chart — the clear, legible detail view */}
-          <motion.div variants={itemVariants} className="bg-[#141414] border border-[#333]">
-            <div className="flex border-b border-[#333]">
-              <div className="bg-[#E85002] text-white px-4 py-2 font-mono text-[10px] tracking-widest shrink-0 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-white rounded-full" />
-                SKILL_MATRIX v4 · BAR VIEW
-              </div>
-              <div className="flex-1 bg-[#141414] px-4 py-2 hidden sm:flex items-center justify-end gap-3 font-mono text-[10px] text-[#646464] border-l border-[#333]">
-                <span className="flex items-center gap-1.5"><span className="w-2 h-2 bg-[#E85002] rounded-sm inline-block" /> Current</span>
-                <span className="text-[#333]">|</span>
-                <span className="flex items-center gap-1.5"><span className="w-px h-2.5 bg-white/40 inline-block" /> Target</span>
-              </div>
-            </div>
-
-            <div className="p-6 md:p-8">
-              {CATEGORIES.map((cat, ci) => (
-                <div key={cat.title} className={ci > 0 ? 'mt-6 pt-6 border-t border-[#141414]' : ''}>
-                  <div className="font-mono text-[10px] text-[#646464] tracking-wider mb-1 uppercase">// {cat.title}</div>
-                  {cat.skills.map((sk, i) => (
-                    <BarRow key={sk.short} sk={sk} index={ci * 4 + i} isVisible={isVisible} />
-                  ))}
-                </div>
-              ))}
-            </div>
-
-            {/* Cursor */}
-            <div className="border-t border-[#333] px-6 md:px-8 py-4 flex items-center gap-2 text-[#E85002] font-mono text-xs">
-              <span>root@rs-os:~$</span>
-              <span className="inline-block w-2 h-3.5 bg-[#E85002] animate-pulse" />
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>

@@ -8,7 +8,7 @@ export default function SectionDots() {
     { id: 'about', name: '/01 ENGINEER_PROFILE' },
     { id: 'education', name: '/02 ACADEMIC' },
     { id: 'skills', name: '/03 TOOL_LAB' },
-    { id: 'tools', name: '/03b TOOL_STACK' },
+    { id: 'tools', name: '/03b TOOLCHAIN' },
     { id: 'experience', name: '/04 TIMELINE' },
     { id: 'projects', name: '/05 PROJECTS' },
     { id: 'certifications', name: '/06 CERT_VAULT' },
