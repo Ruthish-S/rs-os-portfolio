@@ -68,7 +68,7 @@ export default function About() {
             {/* Cell 0: Portrait PFP */}
             <motion.div variants={itemVariants} className="bg-[#0A0A0A] lg:col-span-3 relative overflow-hidden flex items-end justify-center" style={{ minHeight: 260 }}>
               <img
-                src="/assets/ruthish-pfp.png"
+                src={`${import.meta.env.BASE_URL}assets/ruthish-pfp.png`}
                 alt="Ruthish S"
                 className="absolute inset-0 w-full h-full object-cover object-top select-none pointer-events-none"
                 style={{ opacity: 0.9, mixBlendMode: 'normal' }}

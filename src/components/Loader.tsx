@@ -131,7 +131,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
                   transition={{ duration: 1.1, delay: 0.35, ease: 'linear' }}
                 >
                   <img
-                    src="/assets/ruthish-pfp.png"
+                    src={`${import.meta.env.BASE_URL}assets/ruthish-pfp.png`}
                     alt="Ruthish S"
                     className="w-full h-full object-cover object-top"
                     draggable={false}

@@ -20,7 +20,7 @@ export default function Hero() {
     >
       {/* ── Full-screen portrait background ── */}
       <motion.img
-        src="/assets/ruthish-pfp.png"
+        src={`${import.meta.env.BASE_URL}assets/ruthish-pfp.png`}
         alt=""
         aria-hidden="true"
         className="absolute inset-0 w-full h-[120%] object-cover pointer-events-none select-none"
