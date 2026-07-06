@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Route, Switch } from 'wouter';
+import { Route, Switch, Router } from 'wouter';
 import Loader from './components/Loader';
 import Cursor from './components/Cursor';
 import Nav from './components/Nav';
@@ -21,10 +21,13 @@ export default function App() {
           <Cursor />
           <Nav />
           <SectionDots />
-          <Switch>
-            <Route path="/" component={Home} />
-            <Route component={NotFound} />
-          </Switch>
+
+          <Router base="/rs-os-portfolio">
+            <Switch>
+              <Route path="/" component={Home} />
+              <Route component={NotFound} />
+            </Switch>
+          </Router>
         </>
       )}
     </>
