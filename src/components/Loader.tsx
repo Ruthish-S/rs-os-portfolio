@@ -94,7 +94,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
                 </span>
                 <div className="h-3.5 w-px bg-[#252525]" />
                 <span className="text-[8px] text-[#303030] tracking-[0.2em] uppercase">
-                  Personnel System V13
+                  Personnel System V23
                 </span>
               </div>
               {/* Three hexagons — reference signature */}
@@ -207,7 +207,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
                     </div>
                     {/* Stats */}
                     <div className="text-white text-xl font-light tracking-[0.18em] ml-1">
-                      8.50 &nbsp;07 &nbsp;25 &nbsp;4+
+                      8.50 &nbsp;10 &nbsp;25 &nbsp;4+
                     </div>
                   </div>
                   <div className="text-[#2a2a2a] text-[8px] tracking-[0.08em]">
