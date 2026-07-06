@@ -58,7 +58,7 @@ export default function Nav() {
         <div className="container mx-auto px-6 max-w-7xl flex items-center justify-between font-mono text-xs md:text-sm uppercase tracking-wider">
           <div className="flex items-center gap-2">
             <span className="font-bold text-[#0A0A0A]">RS.OS</span>
-            <span className="text-[#646464]">[v12]</span>
+            <span className="text-[#646464]">[v23]</span>
           </div>
 
           <div className="hidden lg:flex items-center gap-6 text-[#646464]">
