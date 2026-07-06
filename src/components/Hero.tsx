@@ -64,7 +64,7 @@ export default function Hero() {
           <span className="w-2 h-2 bg-[#22C55E] rounded-full animate-pulse" />
           SYSTEM ONLINE |
         </div>
-        <div className="text-white/30">ENGINEER PROFILE LOADED | RS.OS v13.0</div>
+        <div className="text-white/30">ENGINEER PROFILE LOADED | RS.OS v23.0</div>
       </div>
 
       {/* ── Main text content ── */}
